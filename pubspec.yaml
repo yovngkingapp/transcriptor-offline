@@ -1,0 +1,24 @@
+name: transcriptor_offline
+description: App para grabar y transcribir audio offline con Whisper
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  record: ^6.2.0
+  whisper_flutter_new: ^1.0.1
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
+  uuid: ^4.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
