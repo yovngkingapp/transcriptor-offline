@@ -1,0 +1,23 @@
+workflows:
+  android-build:
+    name: Android Build (APK)
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+      xcode: latest
+      vars:
+        MODEL_SIZE: "tiny"   # puedes cambiar después a "base" si tu celular es bueno
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Build Android APK (release)
+        script: |
+          flutter build apk --release --split-per-abi
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+    publishing:
+      email:
+        recipients:
+          - tuemail@ejemplo.com   # cambia por tu correo real (opcional)
