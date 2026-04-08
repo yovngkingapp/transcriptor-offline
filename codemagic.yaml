@@ -20,4 +20,4 @@ workflows:
     publishing:
       email:
         recipients:
-          - tuemail@ejemplo.com   # cambia por tu correo real (opcional)
+          - jorgefty@gmail.com   # cambia por tu correo real (opcional)
